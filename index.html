@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Development Program - Marmik Mewada</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- AOS Library for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+
+<body class="bg-gradient-to-br from-blue-900 to-purple-800">
+
+    <!-- Navbar -->
+    <nav class="bg-transparent p-5">
+        <div class="flex justify-between items-center">
+            <a href="#" class="text-white text-3xl font-extrabold">Marmik Mewada</a>
+            <div class="hidden md:flex space-x-8 text-white">
+                <a href="#hero" class="hover:text-indigo-300">Home</a>
+                <a href="#about" class="hover:text-indigo-300">About</a>
+                <a href="#curriculum" class="hover:text-indigo-300">Curriculum</a>
+                <a href="#pricing" class="hover:text-indigo-300">Pricing</a>
+                <a href="#prerequisites" class="hover:text-indigo-300">Prerequisites</a>
+                <a href="#contact" class="hover:text-indigo-300">Contact</a>
+            </div>
+            <!-- Mobile toggle -->
+            <button id="navbar-toggle" class="md:hidden text-white">
+                <span class="text-2xl">&#9776;</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex justify-center items-center text-center text-white px-6" data-aos="fade-in">
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-600 opacity-75"></div>
+        <div class="relative z-10">
+            <h1 class="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">
+                Unlock Your Full Stack Potential
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">A premium, AI-powered Full Stack Development program designed to help you stand out and get job-ready in 6 months.</p>
+            <a href="#contact" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-xl text-lg font-semibold hover:bg-gradient-to-l transition duration-300">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gradient-to-r from-purple-900 to-indigo-800 text-center text-white" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">About the Course</h2>
+        <div class="max-w-3xl mx-auto px-4">
+            <p class="text-lg md:text-xl leading-relaxed mb-8">
+                This program offers the full stack curriculum, covering everything from HTML and CSS to advanced technologies like React, Node.js, and Next.js. You'll work on live projects, develop industry-grade skills, and solve real-world challenges.
+            </p>
+            <p class="text-lg md:text-xl leading-relaxed">
+                Plus, AI-driven tools will automate tasks, suggest improvements, and make your learning process more efficient.
+            </p>
+        </div>
+    </section>
+
+    <!-- AI-Powered Learning Section -->
+    <section class="py-16 bg-gradient-to-br from-pink-600 to-purple-500 text-center text-white" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">AI-Powered Learning</h2>
+        <p class="text-lg md:text-xl mb-8">
+            Harness the power of Artificial Intelligence to optimize your learning journey. Build projects faster, debug more effectively, and automate mundane tasks while enhancing your development workflow.
+        </p>
+        <ul class="space-y-4 text-left text-lg md:text-xl mx-auto max-w-3xl">
+            <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>AI-assisted code suggestions and debugging</span></li>
+            <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>Personalized learning paths based on performance</span></li>
+            <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>Task automation for smoother workflow</span></li>
+        </ul>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gradient-to-r from-indigo-800 to-purple-700 text-center text-white" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">Pricing</h2>
+        <div class="max-w-3xl mx-auto px-4">
+            <p class="text-lg md:text-xl mb-6">
+                The course is priced at ₹25,000 INR for each student in a batch of 25 students. The course is conducted in both Hindi and English to accommodate a wider audience.
+            </p>
+            <p class="text-lg md:text-xl mb-6">
+                You can opt for easy installment payments. Pay ₹2,000 INR for each topic you learn. This makes it easier to pay as you progress through the course.
+            </p>
+            <a href="#contact" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-xl text-lg font-semibold hover:bg-gradient-to-l transition duration-300">Enroll Now</a>
+        </div>
+    </section>
+
+    <!-- Prerequisites Section -->
+    <section id="prerequisites" class="py-16 bg-gradient-to-br from-purple-900 to-indigo-800 text-center text-white" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">Prerequisites</h2>
+        <div class="max-w-3xl mx-auto px-4">
+            <p class="text-lg md:text-xl mb-6">
+                Before enrolling in this course, ensure you meet the following prerequisites:
+            </p>
+            <ul class="space-y-4 text-left text-lg md:text-xl mx-auto max-w-3xl">
+                <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>A laptop with at least 4GB RAM and an up-to-date browser.</span></li>
+                <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>Reliable internet connection (as the course is task-based and requires online access).</span></li>
+                <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>A keen interest in learning Full Stack Development and a commitment to completing the course tasks.</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="curriculum" class="py-16 bg-gradient-to-br from-indigo-800 to-purple-700 text-white text-center" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">Course Curriculum</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-black transition transform hover:scale-105">
+                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">HTML & CSS</h3>
+                <p>Learn web design fundamentals with hands-on HTML5 and CSS3 projects.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-black transition transform hover:scale-105">
+                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">JavaScript & React</h3>
+                <p>Master interactive UIs and dynamic web applications with JavaScript and React.js.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-black transition transform hover:scale-105">
+                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Node.js & Express</h3>
+                <p>Create powerful backend services and APIs using Node.js and Express.js.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-black transition transform hover:scale-105">
+                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">MongoDB & Firebase</h3>
+                <p>Learn to build, manage, and scale real-time databases with MongoDB and Firebase.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-black transition transform hover:scale-105">
+                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Next.js & NextAuth</h3>
+                <p>Develop SEO-optimized, server-side rendered apps with Next.js and secure them with NextAuth.js.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-br from-blue-800 to-purple-600 text-center text-white" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">Get in Touch</h2>
+        <p class="text-lg md:text-xl mb-8">Ready to become a full-stack developer? Reach out to start your journey!</p>
+        <a href="https://wa.me/919925081704" target="_blank" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-xl text-lg font-semibold hover:bg-gradient-to-l transition duration-300">Contact on WhatsApp</a>
+    </section>
+
+    <!-- AOS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Navbar toggle
+        document.getElementById('navbar-toggle').addEventListener('click', function () {
+            const navbarLinks = document.querySelector('.navbar-links');
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
