@@ -32,6 +32,15 @@
                 <span class="text-2xl">&#9776;</span>
             </button>
         </div>
+        <!-- Mobile navbar links -->
+        <div class="navbar-links hidden flex-col md:hidden absolute top-0 left-0 w-full bg-blue-900 p-5 space-y-4 text-white">
+            <a href="#hero" class="hover:text-indigo-300">Home</a>
+            <a href="#about" class="hover:text-indigo-300">About</a>
+            <a href="#curriculum" class="hover:text-indigo-300">Curriculum</a>
+            <a href="#pricing" class="hover:text-indigo-300">Pricing</a>
+            <a href="#prerequisites" class="hover:text-indigo-300">Prerequisites</a>
+            <a href="#contact" class="hover:text-indigo-300">Contact</a>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -146,7 +155,7 @@
         // Navbar toggle
         document.getElementById('navbar-toggle').addEventListener('click', function () {
             const navbarLinks = document.querySelector('.navbar-links');
-            navbarLinks.classList.toggle('active');
+            navbarLinks.classList.toggle('hidden');
         });
     </script>
 </body>
