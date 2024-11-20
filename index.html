@@ -11,6 +11,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <!-- AOS Library for Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        /* Custom styling for mobile navbar */
+        #navbarphone {
+            display: none; /* Initially hidden */
+        }
+
+        @media (max-width: 768px) { 
+            #navbarphone {
+                display: none ;
+                flex-direction: column; /* Show on mobile */
+                
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+                z-index: 999;
+            }
+
+            #navbarphone .navbar-links {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 80%;
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px; /* Vertically aligned links */
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-gradient-to-br from-blue-900 to-purple-800">
@@ -26,6 +58,7 @@
                 <a href="#pricing" class="hover:text-indigo-300">Pricing</a>
                 <a href="#prerequisites" class="hover:text-indigo-300">Prerequisites</a>
                 <a href="#contact" class="hover:text-indigo-300">Contact</a>
+                <a href="#github" class="hover:text-indigo-300">GitHub</a>
             </div>
             <!-- Mobile toggle -->
             <button id="navbar-toggle" class="md:hidden text-white">
@@ -33,13 +66,17 @@
             </button>
         </div>
         <!-- Mobile navbar links -->
-        <div class="navbar-links hidden flex-col md:hidden absolute top-0 left-0 w-full bg-blue-900 p-5 space-y-4 text-white">
+        <div id="navbarphone" class="navbar-links hidden md:hidden flex flex-col space-y-4 bg-blue-900 p-5 text-white absolute top-0 left-0 w-full h-full z-10">
+            <button id="close-navbar" class="text-white text-3xl absolute top-5 right-5">
+                &times;
+            </button>
             <a href="#hero" class="hover:text-indigo-300">Home</a>
             <a href="#about" class="hover:text-indigo-300">About</a>
             <a href="#curriculum" class="hover:text-indigo-300">Curriculum</a>
             <a href="#pricing" class="hover:text-indigo-300">Pricing</a>
             <a href="#prerequisites" class="hover:text-indigo-300">Prerequisites</a>
             <a href="#contact" class="hover:text-indigo-300">Contact</a>
+            <a href="#github" class="hover:text-indigo-300">GitHub</a>
         </div>
     </nav>
 
@@ -81,6 +118,18 @@
         </ul>
     </section>
 
+    <!-- GitHub Showcase Section -->
+    <section id="github" class="py-16 bg-gradient-to-br from-blue-800 to-purple-600 text-center text-white" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">My Projects on GitHub</h2>
+        <p class="text-lg md:text-xl mb-8">
+            Explore my GitHub profile to see the range of projects I've built. From full-stack applications to cutting-edge AI tools, my projects showcase my skills and passion for development.
+        </p>
+        <p class="text-lg md:text-xl mb-8">
+            Not only do I use AI to streamline my own work, but I also teach students how to use AI to level up their development skills. By understanding how to leverage AI tools and prompt engineering, you can supercharge your workflow and become a master in the field.
+        </p>
+        <a href="https://github.com/marmikmewada" target="_blank" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-xl text-lg font-semibold hover:bg-gradient-to-l transition duration-300">Check Out My GitHub</a>
+    </section>
+
     <!-- Pricing Section -->
     <section id="pricing" class="py-16 bg-gradient-to-r from-indigo-800 to-purple-700 text-center text-white" data-aos="fade-up">
         <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">Pricing</h2>
@@ -99,64 +148,49 @@
     <section id="prerequisites" class="py-16 bg-gradient-to-br from-purple-900 to-indigo-800 text-center text-white" data-aos="fade-up">
         <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">Prerequisites</h2>
         <div class="max-w-3xl mx-auto px-4">
-            <p class="text-lg md:text-xl mb-6">
-                Before enrolling in this course, ensure you meet the following prerequisites:
-            </p>
-            <ul class="space-y-4 text-left text-lg md:text-xl mx-auto max-w-3xl">
-                <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>A laptop with at least 4GB RAM and an up-to-date browser.</span></li>
-                <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>Reliable internet connection (as the course is task-based and requires online access).</span></li>
-                <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>A keen interest in learning Full Stack Development and a commitment to completing the course tasks.</span></li>
+            <ul class="space-y-4 text-left text-lg md:text-xl mx-auto">
+                <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>Basic knowledge of programming</span></li>
+                <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>Willingness to learn</span></li>
+                <li class="flex items-center space-x-3"><span class="text-xl">&#10003;</span><span>Passion for web development</span></li>
             </ul>
         </div>
     </section>
 
-    <!-- Curriculum Section -->
-    <section id="curriculum" class="py-16 bg-gradient-to-br from-indigo-800 to-purple-700 text-white text-center" data-aos="fade-up">
-        <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">Course Curriculum</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-black transition transform hover:scale-105">
-                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">HTML & CSS</h3>
-                <p>Learn web design fundamentals with hands-on HTML5 and CSS3 projects.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-black transition transform hover:scale-105">
-                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">JavaScript & React</h3>
-                <p>Master interactive UIs and dynamic web applications with JavaScript and React.js.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-black transition transform hover:scale-105">
-                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Node.js & Express</h3>
-                <p>Create powerful backend services and APIs using Node.js and Express.js.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-black transition transform hover:scale-105">
-                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">MongoDB & Firebase</h3>
-                <p>Learn to build, manage, and scale real-time databases with MongoDB and Firebase.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg text-black transition transform hover:scale-105">
-                <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Next.js & NextAuth</h3>
-                <p>Develop SEO-optimized, server-side rendered apps with Next.js and secure them with NextAuth.js.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gradient-to-br from-blue-800 to-purple-600 text-center text-white" data-aos="fade-up">
+    <section id="contact" class="py-16 bg-gradient-to-r from-indigo-800 to-purple-700 text-center text-white" data-aos="fade-up">
         <h2 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 mb-6">Get in Touch</h2>
-        <p class="text-lg md:text-xl mb-8">Ready to become a full-stack developer? Reach out to start your journey!</p>
-        <a href="https://wa.me/919925081704" target="_blank" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-xl text-lg font-semibold hover:bg-gradient-to-l transition duration-300">Contact on WhatsApp</a>
+        <p class="text-lg md:text-xl mb-8">
+            Have any questions? Feel free to reach out to me, and I'll get back to you as soon as possible. I am here to assist you with any queries you have.
+        </p>
+        <a href="mailto:marmik.mewada@example.com" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white py-3 px-6 rounded-xl text-lg font-semibold hover:bg-gradient-to-l transition duration-300">Contact Me</a>
     </section>
 
-    <!-- AOS Script -->
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 py-8 text-center text-white">
+        <p class="text-sm">&copy; 2024 Marmik Mewada. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for navbar toggle -->
+    <script>
+        const navbarToggle = document.getElementById("navbar-toggle");
+        const navbarPhone = document.getElementById("navbarphone");
+        const closeNavbar = document.getElementById("close-navbar");
+
+        // Toggle the navbar visibility
+        navbarToggle.addEventListener("click", () => {
+            navbarPhone.style.display = navbarPhone.style.display === "none" ? "flex" : "none";
+        });
+
+        // Close the navbar when close button is clicked
+        closeNavbar.addEventListener("click", () => {
+            navbarPhone.style.display = "none";
+        });
+    </script>
+
+    <!-- AOS Library for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-
-        // Navbar toggle
-        document.getElementById('navbar-toggle').addEventListener('click', function () {
-            const navbarLinks = document.querySelector('.navbar-links');
-            navbarLinks.classList.toggle('hidden');
-        });
+        AOS.init();
     </script>
 </body>
 
